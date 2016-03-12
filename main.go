@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"log"
 
 	"github.com/robhor/ernis/lib"
 )
@@ -10,8 +9,8 @@ import (
 func main() {
 	meal, err := ernis.GetTodaysMeals()
 	if err != nil {
-		log.Fatal(err)
+		fmt.Println(err)
+	} else {
+		fmt.Println(meal)
 	}
-
-	fmt.Println(meal)
 }
